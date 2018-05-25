@@ -9,3 +9,15 @@ def insertion_sort(A):
     print(A)
 
 insertion_sort([3,2,1,4])
+
+
+def straight_insertion_sort(lst):
+    for i in range(1, len(lst)):
+        save = lst[i]
+        j = i
+        while j > 0 and lst[j - 1] > save:
+            lst[j] = lst[j - 1]
+            j -= 1
+        lst[j] = save
+
+
